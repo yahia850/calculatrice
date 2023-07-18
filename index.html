@@ -1,0 +1,60 @@
+<html> 
+   <head> 
+      <script> 
+         //fonction qui évalue le chiffre et renvoie la sortie
+         function calculer() 
+         { 
+           
+             document.getElementById("output").value = eval( document.getElementById("output").value); 
+         } 
+         //fonction qui affiche la valeur
+         function afficher() 
+         { 
+             document.getElementById("output").value+=event.target.id; 
+         } 
+         //fonction qui efface l'écran 
+         function effacer() 
+         { 
+             document.getElementById("output").value = "" 
+         } 
+      </script>
+      <style>
+        td button{width:100%}
+        body{
+            background-color: beige;
+        }
+      </style>
+   </head> 
+   <body> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input id="output"/></td> 
+            <td><button onclick="effacer()">Reset</button></td> 
+         </tr> 
+         <tr> 
+            <td><button  id="1" onclick="afficher()">1</button></td> 
+            <td><button id="2"onclick="afficher()">2</button></td> 
+            <td><button id="3"onclick="afficher()">3</button></td> 
+            <td><button  id="+"onclick="afficher()">+</button></td> 
+         </tr> 
+         <tr> 
+            <td><button id="4" onclick="afficher()">4</button></td> 
+            <td><button id="5" onclick="afficher()">5</button></td> 
+            <td><button id="6" onclick="afficher()">6</button></td> 
+            <td><button  id="-"onclick="afficher()">-</button></td> 
+         </tr> 
+         <tr> 
+            <td><button  id="7"onclick="afficher()">7</button></td> 
+            <td><button  id="8"onclick="afficher()">8</button></td> 
+            <td><button  id="9" onclick="afficher()">9</button></td> 
+            <td><button oid="*" nclick="afficher()">*</button></td> 
+         </tr> 
+         <tr>
+            <td><button id="." onclick="afficher()">.</button></td> 
+            <td><button id="0" onclick="afficher()">0</button></td> 
+            <td><button id="=" onclick="calculer()">=</button></td> 
+            <td><button  id="/" onclick="afficher()">/</button></td> 
+         </tr> 
+      </table> 
+   </body> 
+</html>
